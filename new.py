@@ -35,7 +35,7 @@ def english():
     Button(top, text="NEW USER REGISTRATION", font=("comic sans", 30),
            fg="green", bg="white", width=30, height=0, command=register).pack()
     Button(top, text="LOGIN", font=("comic sans", 40), fg="green",
-           bg="white", width=25, height=0, command=open).pack()
+           bg="white", width=25, height=0, command=login).pack()
 
 
 def open():
@@ -196,7 +196,43 @@ def next_page2():
     label = Label(root, text="Biometrics page", font=(
     'comic sans', 40, 'bold'), fg="red", bg="white")
     label.pack()
-    
 
+def login():
+    root = tk.Tk()
+    top = Toplevel()
+    root.geometry('1280x720')
+    root.title("BIOMETRICS PAGE")
+    top.iconbitmap('logo.png')
+    label = Label(root, text="LOGIN PAGE", font=(
+    'comic sans', 40, 'bold'), fg="red", bg="white")
+    label.pack()
+    l1 = tk.Label(root, text="NAME:", font=(
+        "Arial", 15), bg="pink")
+    l1.place(x=10, y=300)
+    t1 = tk.Entry(root, width=30, bd=5)
+    t1.place(x=200, y=300)
+    l1 = tk.Label(root, text="ADHAAR LINKED Mobile no:", font=(
+        "Arial", 15), bg="pink")
+    l1.place(x=10, y=340)
+    t1 = tk.Entry(root, width=30, bd=5)
+    t1.place(x=300, y=340)
+
+    l2 = tk.Label(root, text="otp:", font=(
+        "Arial", 15), bg="pink")
+    l2.place(x=10, y=380)
+    t2 = tk.Entry(root, width=30, show="*", bd=5)
+    t2.place(x=200, y=380)
+    b1 = tk.Button(root, text="Sign in", font=("Arial", 15),
+                   bg="#ffc22a", command=updation)
+    b1.place(x=170, y=500)
+def updation():
+        root = tk.Tk()
+        top = Toplevel()
+        root.geometry('1280x720')
+        root.title("BIOMETRICS PAGE")
+        top.iconbitmap('logo.png')
+        label = Label(root, text="Details and biometric updation page", font=(
+        'comic sans', 40, 'bold'), fg="red", bg="white")
+        label.pack()
 
 mainloop()
